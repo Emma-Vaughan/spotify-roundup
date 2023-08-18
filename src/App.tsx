@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import Main from './components/main/main';
+import RedirectSpotifyAuthPage from './components/main/redirectSpotifyAuthPage';
 
 function App() {
+  // const urlParams = new URLSearchParams(window.location.search);
+  // let code = urlParams.get("code");
+  // console.log("code", code);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Main/>
+        <RedirectSpotifyAuthPage/>
         <a
           className="App-link"
           href="https://reactjs.org"
