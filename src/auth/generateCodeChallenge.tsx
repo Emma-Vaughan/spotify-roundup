@@ -1,6 +1,7 @@
-export async function generateCodeChallenge(codeVerifier: string) {
-  function base64encode(hashedString: ArrayBuffer) {
-    return btoa(String.fromCharCode.apply(new Uint8Array(hashedString)))
+//@ts-nocheck
+export async function generateCodeChallenge(codeVerifier) {
+  function base64encode(string) {
+    return btoa(String.fromCharCode.apply(null, new Uint8Array(string)))
       .replace(/\+/g, "-")
       .replace(/\//g, "_")
       .replace(/=+$/, "");
